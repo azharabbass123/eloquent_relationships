@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Profile extends Model
+class Series extends Model
 {
     use HasFactory;
 
-    public function user()
+    public function videos()
     {
-        return $this->belongsTo(User::class);
+        return $this->morphMany(Video::class, 'watchable');
     }
 }
