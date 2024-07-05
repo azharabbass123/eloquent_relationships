@@ -13,4 +13,6 @@ class Collection extends Model
     {
         return $this->morphMany(Video::class, 'watchable');
     }
+
+    
 }

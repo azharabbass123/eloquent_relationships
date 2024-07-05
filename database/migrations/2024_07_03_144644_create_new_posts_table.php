@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('new_posts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('newPost_id')->index();
-            $table->string('body');
+            $table->string('title');
+            $table->text('body');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('new_posts');
     }
 };

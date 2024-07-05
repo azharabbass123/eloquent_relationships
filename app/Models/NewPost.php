@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Comment extends Model
+class NewPost extends Model
 {
     use HasFactory;
 
@@ -21,3 +21,5 @@ class Comment extends Model
         return $this->morphToMany(User::class, 'likable')->withTimestamps();
     }
 }
+
+
